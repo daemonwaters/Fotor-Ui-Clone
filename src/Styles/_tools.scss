@@ -1,0 +1,52 @@
+/*Colors*/
+$Btn-Blue:#3e89fd;
+$Btn-Blue-hover:#0E61ED;
+$Component-Btn:#2D7EFA;
+$primary-blue:#3457FD;
+$Btn-White:#F2F2F2;
+$Text-color:#676C75;
+$Heading-color:#272C34;
+$DropDown-heading-color:#414751;
+$DropDown-text-color:#898E98;
+$Footer-bg:#1B1E25;
+$Footer-text:#55575C;
+$Footer-icon:#54565B;
+
+/* Fonts... */
+
+$logo:16px;
+$Hero-heading:40px;
+$nav-link:14px;
+$dropdown-heading:14px;
+$dropdown-text:12.5px;
+$component-heading:32px;
+$component-text:16px;
+$footer-text:12.5px;
+
+/*Font-weights*/
+$normal:400;
+$medium:500;
+$bold:700;
+
+
+
+@mixin h2 {
+    font-size: $component-heading;
+    color: $Heading-color;
+    font-weight: $medium;
+}
+
+
+@mixin cp {
+    font-size: $component-text;
+    color: $Text-color;
+}
+
+
+@function set-color($color){
+    @if(brightness($color) > 80%) {
+        @return #000
+    } @else {
+        @return #fff
+    }
+}
